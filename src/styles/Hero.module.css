@@ -1,0 +1,87 @@
+.wrapper {
+    max-width: 1200px;
+    margin: auto;
+    padding: 24px 0;
+  }
+  
+  .list {
+    display: flex;
+    justify-content: space-around;
+    font-size: 24px;
+    list-style: none;
+  }
+  
+  .item {
+    cursor: pointer;
+  }
+  
+  .item::after {
+    content: "";
+    display: block;
+    margin: auto;
+    width: 0%;
+    height: 1px;
+    background-color: #f3f3f3;
+    transition: 0.4s;
+  }
+  
+  .item:hover::after {
+    width: 100%;
+  }
+  
+  .square {
+    width: 75vmin;
+    height: 75vmin;
+    outline: solid;
+    position: relative;
+    margin: 0 auto 120px;
+  }
+  
+  .square::after {
+    content: "";
+    position: absolute;
+    bottom: -5%;
+    right: -10%;
+    width: 30%;
+    height: 30%;
+    background: transparent;
+    outline: solid;
+    animation: rotateAnime 3s infinite ease-in-out;
+  }
+  
+  @keyframes rotateAnime {
+    100% {
+      transform: rotate(90deg);
+    }
+  }
+  
+  .text {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: left;
+    line-height: 1.5;
+    width: 100%;
+    font-size: 40px;
+    padding: 0 20px;
+    background: linear-gradient(to right, aqua, purple);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .text {
+      font-size: 24px;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .list {
+      font-size: 16px;
+    }
+    .text {
+      font-size: 16px;
+    }
+  }
