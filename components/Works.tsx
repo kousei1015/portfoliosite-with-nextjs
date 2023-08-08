@@ -21,7 +21,7 @@ const Works = ({ worksRef }: { worksRef: React.RefObject<HTMLDivElement> }) => {
             <p className={styles.description}>こちらのサイト</p>
           </section>
           <section className={styles.card}>
-            <a href="https://mapcollection.tk">
+            <a href="https://front.mapcollection.work">
               <Image
                 className={styles.screenshot}
                 src={screenshot2}
